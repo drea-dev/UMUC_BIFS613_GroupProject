@@ -70,7 +70,7 @@ If you are having trouble loading the exprs_tidy file below, manually override t
   
 ```{r fix_setwd}
 ### EDIT if necessary
-setwd("~/UMUC/BIFS 613 - Stats of Bioprocesses/Group Project")
+#setwd("~/UMUC/BIFS 613 - Stats of Bioprocesses/Group Project")
 ```
 
 ### FYI: how I got the data
@@ -371,15 +371,19 @@ pca_obj %>%
 ### Correlate PCs to phenoData (known sample variables)
 
 ##Let's Try something
-```{r pca_BAP1}
+```{r pca_exprs_BAP1}
 #BAP1 vs gender
-pca_obj %>%
-  ggbiplot(
-    choices = 1:2,
-    groups = pheno$group
-    
-  )
-  
+#let's try PCA of just the exprs maybe? check to see where she stapled the sex info to the exprs - think database - if the key is the sample IDs, then how to show correlation
+
+#staple together just the BAP1 and gender? But is that useful with PCA? What about just a graph of the BAP1 data with gender highlighted, with an overlay of the other PCA?
+
+#pca_obj %>%
+#  ggbiplot(
+#    choices = 1:2,
+#    groups = pheno$group
+#    
+#  )
+#  
 
 ```
 

@@ -282,10 +282,6 @@ BAP1 <- tidy %>%
 
 ### Answers to questions
 
-RE: "question here - is there a way to make this look more reasonable? Currently it's just the 1, but it's ugly, and probably needs to be filtered again. Do I do the log ajustment before the fpkm filter?" --> Yes, good catch! I added the log-transformation in the preparing data code chunk below. It still only yields 1 PC using the Kaiser cutoff.
-
-RE: "Once I've the scree/kaiser cutoff where I want it, I can move forward with the rest of these. As in all things, apparently the setup is the difficult part." --> I completely agree! For the latter code/plotting, we can just go with using the first 5 PCs (line 377).
-
 Tasks:
   a. Generate scree plot with Kaiser cutoff line
   b. Determine number of PCs to use, using Kaiser cutoff
@@ -369,23 +365,6 @@ pca_obj %>%
 ```
 
 ### Correlate PCs to phenoData (known sample variables)
-
-##Let's Try something
-```{r pca_exprs_BAP1}
-#BAP1 vs gender
-#let's try PCA of just the exprs maybe? check to see where she stapled the sex info to the exprs - think database - if the key is the sample IDs, then how to show correlation
-
-#staple together just the BAP1 and gender? But is that useful with PCA? What about just a graph of the BAP1 data with gender highlighted, with an overlay of the other PCA?
-
-#pca_obj %>%
-#  ggbiplot(
-#    choices = 1:2,
-#    groups = pheno$group
-#    
-#  )
-#  
-
-```
 
 #### Run
 
